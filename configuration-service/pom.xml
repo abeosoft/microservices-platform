@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.abeosoft.services.platform</groupId>
+	<groupId>com.abeosoft.microservices.platform</groupId>
 	<artifactId>configuration-service</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>configuration-service</name>
-	<description>BBNA Services Configuration Service</description>
+	<description>Microservices Configuration Service</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
