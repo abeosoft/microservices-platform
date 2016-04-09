@@ -1,0 +1,43 @@
+server:
+  port: 8888
+  
+spring:
+  application:
+    name: configuration-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/abeosoft/all-services-configuration
+          searchPaths: '{application},{application}/{profile},{application}/{profile}/{label}'
+
+info:
+  service:
+    artifact: '@project.artifactId@'
+    name: '@project.name@'
+    description: '@project.description@'
+    version: '@project.version@'
+      
+endpoints:
+  health:
+    enabled: true
+  info:
+    enabled: true
+  autoconfig:
+    enabled: false
+  beans:
+    enabled: false
+  configprops:
+    enabled: false
+  dump:
+    enabled: false
+  env:
+    enabled: false
+  metrics:
+    enabled: false
+  mappings:
+    enabled: false
+  shutdown:
+    enabled: false
+  trace:
+    enabled: false
