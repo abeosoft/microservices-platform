@@ -10,5 +10,6 @@
 	<modules>
 		<module>configuration-service</module>
 		<module>configuration-test-client</module>
+		<module>rest-sample</module>
 	</modules>
 </project>
