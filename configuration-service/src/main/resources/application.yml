@@ -1,5 +1,31 @@
+server:
+  port: ${PORT:8888}
+
+spring:
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/abeosoft/all-services-configuration
+          searchPaths: '{application},{application}/{profile},{application}/{profile}/{label}'
+          basedir: target\config-repo
+
+security:
+  user:
+    password: '{cipher}AQCyoVF/rX6PWJIYxPd1EUbh3+So1R7bZTVM3zV1geOfWmaBzAARZNvs5OTcy+4gKH8HsxTpGJeQLjJfpKQ6eSmg02M7Vh9kLTnyFsUuKQ5qRkRXnIpHDNrQ/+TAGat0s3iYgP2oDTeJwBDl3C8eHS1Tf4621WTcTU0e5y30ps/B+E9l9fRWNVensCnLt17nkALSQbC3PSjBAJOVolWoz1tsrFoPbCtT4MCdtcxfzcIU8l7VIivavhu2AY0KCGoyyvyCvNZmjK5TVXGFkWsOR3OPyjRU0n2s0h1FDZZ5rG953tUax1LNcZ3oEg9qTCoEjXEDuZwEDcZovbohM1c/06QP31ZPXMnUOeXRNSQ2CUKextWYydVDT4kTyGCw8RjsGoA='          
+
+endpoints:
+  enabled: false
+  health:
+    enabled: true
+    sensitive: false
+  info:
+    enabled: true
+    
 info:
   service:
-    name: @project.name@
-    description: @project.description@
-    version: @project.version@
+    name: '@project.name@'
+    description: '@project.description@'
+    version: '@project.version@'

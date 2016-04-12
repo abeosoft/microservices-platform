@@ -4,5 +4,3 @@ spring:
   cloud:
     config:
       uri: ${CONFIG_SERVER_URL:http://user:password@localhost:8888}
-  profiles:
-    active: dev

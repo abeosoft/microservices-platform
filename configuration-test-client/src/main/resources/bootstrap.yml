@@ -1,11 +1,6 @@
-server:
-  port: ${PORT:8090}
-
 spring:
   application:
     name: configuration-test-client
   cloud:
     config:
-      uri: http://user:password@localhost:8888
-  profiles:
-    active: qa
+      uri: ${CONFIG_SERVER_URL:http://user:password@localhost:8888}

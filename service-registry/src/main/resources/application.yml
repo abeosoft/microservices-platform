@@ -1,5 +1,9 @@
 server:
   port: ${PORT:8761}
+
+security:
+  user:
+    password: '{cipher}AQCyoVF/rX6PWJIYxPd1EUbh3+So1R7bZTVM3zV1geOfWmaBzAARZNvs5OTcy+4gKH8HsxTpGJeQLjJfpKQ6eSmg02M7Vh9kLTnyFsUuKQ5qRkRXnIpHDNrQ/+TAGat0s3iYgP2oDTeJwBDl3C8eHS1Tf4621WTcTU0e5y30ps/B+E9l9fRWNVensCnLt17nkALSQbC3PSjBAJOVolWoz1tsrFoPbCtT4MCdtcxfzcIU8l7VIivavhu2AY0KCGoyyvyCvNZmjK5TVXGFkWsOR3OPyjRU0n2s0h1FDZZ5rG953tUax1LNcZ3oEg9qTCoEjXEDuZwEDcZovbohM1c/06QP31ZPXMnUOeXRNSQ2CUKextWYydVDT4kTyGCw8RjsGoA='          
   
 eureka:
   instance:
@@ -8,7 +12,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: ${eureka.serviceUrl:http://user:password@localhost:${PORT}}/eureka/
   client:
     registerWithEureka: false
     fetchRegistry: false
