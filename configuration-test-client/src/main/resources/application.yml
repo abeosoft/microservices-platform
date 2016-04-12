@@ -1,0 +1,5 @@
+info:
+  service:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@

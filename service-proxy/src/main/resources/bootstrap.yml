@@ -1,0 +1,9 @@
+server:
+  port: ${PORT:8765}
+  
+spring:
+  application:
+    name: service-proxy
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER_URL:http://user:password@localhost:8888}

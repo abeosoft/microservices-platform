@@ -1,0 +1,22 @@
+server:
+  port: ${PORT:8761}
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+info:
+  service:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
