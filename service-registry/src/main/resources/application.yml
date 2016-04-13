@@ -9,8 +9,6 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: ${eureka.serviceUrl:http://localhost:${PORT:8761}}/eureka/
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
 
 info:
   service:
