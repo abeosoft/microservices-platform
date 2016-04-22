@@ -13,5 +13,6 @@
 		<module>service-registry</module>
 		<module>service-proxy</module>
 		<module>rest-sample</module>
+		<module>consul-registry</module>
 	</modules>
 </project>
