@@ -1,3 +1,7 @@
+spring:
+  profiles:
+    active: dev
+
 server:
   port: ${PORT:8761}
  
@@ -7,9 +11,3 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: ${eureka.serviceUrl:http://localhost:${PORT:8761}}/eureka/
-
-info:
-  service:
-    name: '@project.name@'
-    description: '@project.description@'
-    version: '@project.version@'
