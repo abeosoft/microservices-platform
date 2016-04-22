@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    consul:
+      discovery:
+        healthCheckInterval: 15m
+      host: localhost
+      port: 8500
