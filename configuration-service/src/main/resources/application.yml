@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: file:///C:\Users\abdeljalil\projects\abeosoft\sources\microservices\all-services-configuration #https://github.com/abeosoft/all-services-configuration
+          uri: https://github.com/abeosoft/all-services-configuration
           searchPaths: '{application},{application}/{profile},{application}/{label},{application}/{profile}/{label}'
           basedir: target\config-repo
 
